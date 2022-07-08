@@ -25,11 +25,13 @@ e-mail da conta de serviço como usuário no google analytics**.
 Utilize o método from_service_account_file(FILE, SCOPES) para criar o
 objeto contendo as credenciais do usuário:
 
+```
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 
 SERVICE_ACCOUNT_FILE = 'path/to/client_secrets.json'
 
 credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+```
 
 Cada API precisa de escopos específicos, que devem ser passados no
 momento de criação das credenciais.
@@ -38,12 +40,15 @@ momento de criação das credenciais.
 
 Crie um objeto de serviço analytics usando o método build:
 
+```
 analytics = build('analyticsreporting', 'v4', credentials=credentials)
+```
 
 O objeto possui um método .reports(), que gera um report a partir da
 resposta de uma GET request, realizada com .batchGet(body). Exemplo
 de execução:
 
+```
 analytics.reports().batchGet(
     body={'reportRequests': [
         {
@@ -53,6 +58,7 @@ analytics.reports().batchGet(
             'dimensions': [{'name': 'ga:country'}]
         }
     ]}).execute()
+```
 
 É possível realizar até 5 requests simultâneas utilizando um batchGet.
 
