@@ -1,8 +1,8 @@
 # Consuming APIs
 
-## Scope
-This repository is dedicated to group relevant information about
-requirements and best practices while consuming google and meta APIs.
+## Escopo
+Esse repositório é dedicado a condensar informações sobre o consumo de
+APIs Google e Facebook.
 
 ### Google 
 
@@ -17,8 +17,12 @@ cópia** da chave privada, e deve ser armazenado com cuidado.
 
 É necessário instalar as bibliotecas de autenticação do google:
 
+```
 pip install --upgrade google-auth google-auth-oauthlib google-auth-httplib2
+```
 
 e a biblioteca de consumo de APIs:
 
+```
 pip install --upgrade google-api-python-client
+```
