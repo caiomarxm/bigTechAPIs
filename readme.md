@@ -26,3 +26,13 @@ e a biblioteca de consumo de APIs:
 ```
 pip install --upgrade google-api-python-client
 ```
+
+### Facebook
+
+#### Pré-requisitos
+
+É possível usar um SDK Python para consumir a Graph API:
+
+```
+pip install facebook_business
+```
